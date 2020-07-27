@@ -1,0 +1,90 @@
+@import "./colors.scss";
+@import "bulma/bulma";
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 90%;
+}
+
+.hero {
+  margin: 1rem auto;
+  max-width: 500px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+}
+
+.loader {
+  display: block;
+  margin: 1rem auto;
+  height: 150px;
+  width: 150px;
+}
+
+.repo-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+
+    .avatar {
+      align-items: center;
+      display: flex;
+      margin: 0.2rem 0;
+
+      .image {
+        margin-right: 0.5rem;
+        max-width: 40px;
+      }
+    }
+
+    .description {
+      flex: 1;
+      font-size: 0.95rem;
+      margin: 0.2rem auto 1rem;
+      line-height: normal;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .counter {
+      background-color: $app-light-grey;
+      border-radius: 20px;
+      color: $app-grey;
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+
+      svg {
+        margin-right: 0.25rem;
+      }
+
+      + .counter {
+        margin-left: 0.3rem;
+      }
+    }
+
+    .language {
+      color: $app-green;
+      font-weight: bold;
+    }
+  }
+}
