@@ -44,3 +44,13 @@ export const searchRepos = async (searchText, language) => {
 
   return await getCancellable(`api/search?q=${query}&sort=stars&order=desc`);
 };
+
+export const getRepo = async (id) => {
+  const { data } = await axios.get(`repositories/${id}`, axiosConfig);
+  return data;
+};
+
+export const getProfile = async (username) => {
+  const { data } = await axios.get(`users/${username}`, axiosConfig);
+  return data;
+};
